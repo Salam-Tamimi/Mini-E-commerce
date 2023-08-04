@@ -1,0 +1,391 @@
+@import url( 'https://fonts.googleapis.com/css2?family=Caveat&family=Delicious+Handrawn&family=League+Spartan&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+body{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #efff0d;
+    box-shadow: 0PX 5px 15px rgba(0, 0, 0, 0.06);
+}
+a{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+#logo{
+    width: 400px;
+    height: 50px;
+    display: inline-block;
+}
+#nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+#nav-item li{
+    list-style: none;
+    padding: 0px 20px;
+}
+#nav-item li a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #382b31;
+    transition: 0.3s ease;
+}
+#nav-item li a:hover,
+#nav-item li a.active{
+    color: #efff0d;
+}
+/* Change styles for span on extra small screens */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #24262b;
+    padding: 70px;
+ }
+  
+  
+.social-links a {
+    margin-right: 10px; /* Add some space between social icons */
+}
+ul{
+	list-style: none;
+}
+footer h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+footer ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+    margin: 20px 0;
+}
+footer .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+footer .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px 80px; */
+    background-color: #efff0d;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#menu-icon {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+/* Show the menu items when the menu-toggle is checked (for smaller screens) */
+#menu-toggle:checked ~ #nav-item {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    left: 350px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 9999;
+}
+
+/* Adjust mobile menu styles */
+#menu-toggle:checked ~ #nav-item li {
+    padding: 20px;
+}
+
+/* Update mobile menu icon */
+#menu-toggle:checked ~ #menu-icon i:before {
+    content: "\f00d"; /* Change to close icon (X) when the menu is open */
+}
+
+/* Add mobile menu icon styles */
+#menu-icon i {
+    font-size: 30px;
+}
+#view-btn{
+    margin-left: 700px;
+    width: 100px;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    
+}
+.card{
+    border: 2px solid #000;
+    margin: 30px;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5);
+}
+.card img{
+    margin-bottom: 10px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+p{
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.card .image-wrapper {
+    display: inline-block; /* or use "block" if you want it to take the full width */
+    border: 2px solid #000;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.5);
+}
+button {
+    background-color: #efff0d;
+    color: white;
+    padding: 14px 0;
+    /* margin: 10px 0; */
+    border: none;
+    cursor: grabbing;
+    margin-left: 700px;
+    margin-bottom: 20px;
+    width: 100px;
+    font-size: 20px;   
+}
+#div{
+    font-size: 40px;
+    text-align: center;
+    border: #000 1px solid;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding: 50px;
+    margin-left: 500px;
+}
+/*responsive*/
+/*********************************************mobile***********************************************/
+
+@media screen and (max-width: 480px){
+    #menu-toggle:checked ~ #nav-item {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 130px;
+        right: 0px;
+        left: 230px;
+        background-color: #f1f1f1;
+        box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        z-index: 9999;
+    }
+    #nav-item {
+        display: none;
+    }
+    #nav-item li a{
+        font-size: 50px;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav {
+        flex-wrap: wrap;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
+    footer ul li a{
+        font-size: 50px;
+    }
+    footer h4{
+        font-size: 60px;
+        padding-bottom: 30px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    footer .social-links a{
+        display: block;
+        height: 90px;
+        width: 90px;
+        background-color: rgba(255,255,255,0.2);
+        margin:0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+    footer .social-links a{
+        height: 100px;
+        width: 100px;
+    }
+    .fab{
+        font-size:4em !important
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 50px;
+    }
+    p{
+        margin-bottom: 20px;
+        font-size: 40px;
+        text-align: center;
+    }
+    .card .image-wrapper {
+        display: inline-block; /* or use "block" if you want it to take the full width */
+        padding-left: 50px ;
+        width: 300px;
+    }
+    .card img{
+        margin-bottom: 10px;
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    button {
+        background-color: #efff0d;
+        color: white;
+        padding: 14px 0;
+        border: none;
+        cursor: grabbing;
+        margin-left: 200px;
+        margin-bottom: 20px;
+        width: 200px;
+        font-size: 40px;   
+        }
+        #div{
+            font-size: 40px;
+            text-align: center;
+            border: #000 1px solid;
+            margin-bottom: 100px;
+            margin-top: 100px;
+            padding: 50px;
+            margin-left: 0px;
+        }
+}
+/*********************************************Tablet***********************************************/
+@media screen and (min-width:481px) and (max-width:768px){
+    footer{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
+    footer ul li a{
+        font-size: 50px;
+    }
+    footer h4{
+        font-size: 50px;
+        padding-bottom: 30px;
+    }
+    button {
+        margin-left: 280px;
+        margin-bottom: 20px;
+        width: 200px;
+        font-size: 40px;   
+        }
+    footer .social-links a{
+        display: block;
+        height: 90px;
+        width: 90px;
+        background-color: rgba(255,255,255,0.2);
+        margin:0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+    footer .social-links a{
+        height: 100px;
+        width: 100px;
+    }
+    .fab{
+        font-size:4em !important
+    }
+    #nav-item {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav {
+        flex-wrap: wrap;
+    }
+
+    #menu-toggle:checked ~ #nav-item {
+        display: flex;
+        top: 100px;
+        right: 0px;
+        left: 0px;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+    }
+    #div{
+        font-size: 40px;
+        text-align: center;
+        border: #000 1px solid;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        padding: 50px;
+        margin-left: 0px;
+    }
+}

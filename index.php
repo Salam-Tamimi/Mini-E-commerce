@@ -23,23 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini E-commerce</title>
     <link rel="stylesheet" href="./Css/index.css">
-    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/header.css">
+    <link rel="stylesheet" href="./Css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
 <body>
-    <header>
-        <nav>
-            <img src="./images/logo.jpg" alt="logo"class="logo">
-            <h1>Mini E-commerce Store</h1>
-            <ul id="nav-item">
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Catagories</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<?php
+    include "./header.php";
+?>
     <form action="" method="post">
         <div class="formcontainer">
             <h1>Add products</h1>
@@ -76,37 +69,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"])) {
         echo '</table>';
     }
     ?>
-        <a href="./view_products.php" ><button id="view-btn" name="view" style="width:20%;margin-left:20%">View Products</button></a>
+        <a href="./view_products.php" ><button id="view-btn" name="view" style="width:20%;margin-left:20%;margin-top: 3%;margin-bottom: 3%;">View Products</button></a>
     
-    <div class="footer-container">
-        <footer class="row">       
-            <p class="col-12">&copy; <?php echo date("Y"); ?> Mini E-commerce</p>
-            <div class="col-4">
-                <h4>company</h4>
-                <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">our services</a></li>
-                    <li><a href="#">privacy policy</a></li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h4>get help</h4>
-                <ul>
-                    <li><a href="#">shipping</a></li>
-                    <li><a href="#">order status</a></li>
-                    <li><a href="#">payment options</a></li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h4>Games shop</h4>
-                <ul>
-                    <li><a href="#">Kids games</a></li>
-                    <li><a href="#">Teaching games</a></li>
-                    <li><a href="#">Fun games</a></li>
-                </ul>
-            </div>
-        </footer>
-    </div>
+<?php
+    include './footer.php'
+?>
   
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
